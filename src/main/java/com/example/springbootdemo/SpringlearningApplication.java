@@ -11,6 +11,8 @@ public class SpringlearningApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(SpringlearningApplication.class, args);
 			Home h = context.getBean(Home.class);
 			h.connect();
+			Home h2 = context.getBean(Home.class);
+			h2.connect();
 	}
 
 }

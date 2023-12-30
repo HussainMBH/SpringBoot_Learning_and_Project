@@ -5,6 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Home {
+	
+	public Home() {
+		System.out.println("Home Home");
+	}
+	
 	private String owner;
 	private int doorNo;
 	public String getOwner() {
@@ -21,7 +26,7 @@ public class Home {
 	}
 	
 	public void connect() {
-		System.out.print("Connecting to network");
+		System.out.println("Connecting to network");
 	}
 	
 
