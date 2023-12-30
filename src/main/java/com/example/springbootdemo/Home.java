@@ -1,9 +1,11 @@
 package com.example.springbootdemo;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
+@Scope(value="prototype")
 public class Home {
 	
 	public Home() {
