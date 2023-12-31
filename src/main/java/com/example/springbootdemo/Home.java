@@ -1,5 +1,6 @@
 package com.example.springbootdemo;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
@@ -14,6 +15,9 @@ public class Home {
 	
 	private String owner;
 	private int doorNo;
+	
+	@Autowired
+	private InternetConnection modem; // create object in InternetConnection class
 	public String getOwner() {
 		return owner;
 	}
@@ -28,6 +32,7 @@ public class Home {
 	}
 	
 	public void connect() {
+		modem.switchOn();
 		System.out.println("Connecting to network");
 	}
 	
